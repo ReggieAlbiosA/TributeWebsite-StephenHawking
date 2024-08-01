@@ -25,3 +25,26 @@ This tribute website honors Stephen Hawking, the renowned theoretical physicist.
 
    ```bash
    git clone https://github.com/yourusername/tribute-website-stephen-hawking.git
+
+2. **Navigate to the Project Directory**
+   ```bash
+   cd tribute-website-stephen-hawking
+   
+3. **Set Up a Virtual Environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+   
+4. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   
+5. **Start the Flask Server**
+   ```bash
+   flask run
+
+6. **Open the Website**
+   Open http://127.0.0.1:5000 in your preferred web browser to view the website locally.
+   
+   
+
