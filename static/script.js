@@ -86,7 +86,7 @@ window.addEventListener('scroll', function() {
     const fixed = document.getElementById('fixed');
     const widen = document.getElementById('widen');
     var links = document.querySelectorAll('.navigation-bar a');
-    const threshold = 70; 
+    const threshold = 80; 
   
     if (window.scrollY > threshold) {
         fixed.classList.add('fixed-nav');

@@ -29,7 +29,7 @@ header{
     background-repeat: no-repeat;
     background-attachment:scroll;
     color: white;
-     margin-top: -60px;
+     margin-top: -65px;
 
   }
 
@@ -45,7 +45,7 @@ header{
     top: 0;
   }
   header .barrier{
-    height: 60px;
+    height: 65px;
     width: 100%;
     top: 0;
     position: sticky;
@@ -53,11 +53,13 @@ header{
  
 
    .navigation-bar{  
-    width: 35%;
+    width: 45%;
     border-radius: 50px;
     position: absolute;
     text-align: center;
-    left: 32.5%;
+    /* max-width: 1500px; */
+
+    left: 26.5%;
     transition: 0.1s;
     display: flex;
     justify-content: center;
@@ -72,7 +74,7 @@ header{
    display: flex;
    justify-content: space-between;
    width: 100%;
-  }
+  } 
 
   .navigation-bar ul li{
     flex: 1;
@@ -84,7 +86,7 @@ header{
     justify-content: center;
     color: black; 
     background-color: whitesmoke;
-    height: 60px;
+    height: 50px;
     transition: 0.3s;
     width: 100%;
     
@@ -226,20 +228,16 @@ header{
 
   main h1{
     text-align: center;
-    
-    
-  }
-  /* main .container{
-    margin-top: 200px;
-  } */
+  } 
 
     section{
-    width: 80%;
+    width: 100%;
     display: flex;
     margin-inline: auto;
     justify-content: space-around;
     align-items: center;
     padding-top: 80px;
+    /* background-color: yellowgreen; */
   }
   main section{
     max-width: 1500px;
@@ -261,13 +259,31 @@ header{
   section  ul li{
     color: #333333;
     margin-block: 10%;
+    list-style: disc;  
   }
   
    .chapter-image img{
     width: 350px;
     height: 270px;
-
   } 
+
+  .item4 > *{
+    margin-left: 50px;
+
+  }
+  .item3{
+    margin-left: 60px;
+  }
+  .item8 > *{
+    margin-left: 60px;
+   
+  }
+  .item7 > *{
+   margin-left: 50px;
+  }
+  .item10{
+   margin-right: 40px;
+  }
   .timeline{
     height: 84%;
     background-color: black;
@@ -302,7 +318,7 @@ header{
   position: relative;
   display: flex;
   flex-direction: column;
-  /* background-color: rebeccapurple; */
+
 }
 
 .video-section h1{
@@ -407,6 +423,15 @@ header{
 /* video section css styles */
 
 @media screen and (max-width: 1280px) {
+  .hero{
+    margin-top: -40px !important;
+  }
+
+  header .barrier{
+    height: 40px !important;
+
+  }
+
   .hero-content h3{
       margin-left: 170%;
       margin-top: 0;
@@ -450,6 +475,9 @@ header{
     flex-direction: column;
   /* margin-block: 100px; */
   }
+  main section div{
+    margin-inline: 0 !important;
+  }
   main h1{
     padding-bottom: 0;
   }
@@ -464,6 +492,7 @@ header{
   }
   .item2{
     order: 2;
+
   }
   .item4{
     order: 3;
