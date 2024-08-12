@@ -8,7 +8,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-    min-width: 350px;
+    min-width: 400px;
 
 }
 a{
@@ -33,6 +33,7 @@ header{
 
   }
 
+
   header .nav-wrapper{
     position: sticky;
     top: 0;
@@ -49,16 +50,25 @@ header{
     width: 100%;
     top: 0;
     position: sticky;
+    
   }
- 
+  svg{
+
+    top: 5%;
+    left: 9%;
+    display: none;
+    background-color: rgb(39, 39, 39);
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    
+  }
 
    .navigation-bar{  
     width: 45%;
     border-radius: 50px;
     position: absolute;
     text-align: center;
-    /* max-width: 1500px; */
-
     left: 26.5%;
     transition: 0.1s;
     display: flex;
@@ -166,42 +176,6 @@ header{
   /* header contents css contents */
   
 
-  @media  screen and (max-width: 1000px) {
-    .hero-content{
-        position: static;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items:center;
-        text-align: center;
-        height: 100%;
-    }
-  
-    .hero-link{
-        height: 120px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
-    }
-    .hero-content *{
-        margin: 0 !important;
-    }
-    .hero-content h1{
-        font-size: 35px;
-    }
-    .hero-content h2{
-        font-size: 25px;
-    }
-    .hero-content h3{
-        font-size: 20px;
-    }
-    .hero-content h4{
-        font-size: 12px;
-    }
-    
-  }
   @media screen and (max-width: 600px){
     .hero-content h1{
       font-size: 150%;
@@ -237,7 +211,7 @@ header{
     justify-content: space-around;
     align-items: center;
     padding-top: 80px;
-    /* background-color: yellowgreen; */
+    text-align: justify;
   }
   main section{
     max-width: 1500px;
@@ -263,7 +237,7 @@ header{
   }
   
    .chapter-image img{
-    width: 350px;
+    width: 400px;
     height: 270px;
   } 
 
@@ -313,7 +287,7 @@ header{
 
  .video-section {
   width: 100%;
-  padding-block: 180px;
+  padding: 150px 0;
   background: linear-gradient(to right, #050505, #2D2D2D);
   position: relative;
   display: flex;
@@ -324,8 +298,6 @@ header{
 .video-section h1{
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 80px;
-  margin-inline: 120px;
   font-size: 28px;
   text-align: center;
   
@@ -336,13 +308,13 @@ header{
   margin: auto;
   overflow: hidden;
   color: white;
+  
 
 }
 
 
 .slides {
   display: flex;
-  transition: transform 0.5s;
 }
 
 .slide {
@@ -368,6 +340,7 @@ header{
   font-size: 25px;
   font-weight: 200;
 
+
 }
 
 .slide p {
@@ -377,7 +350,6 @@ header{
 .slide iframe {
   margin-right: 35px;
   max-width: 100%;
-
 
 }
 
@@ -397,6 +369,7 @@ header{
   color: white;
   padding: 10px;
   cursor: pointer;
+  font-size: larger;
 }
 
 .indicators {
@@ -442,28 +415,196 @@ header{
   .hero-content button{
       margin-left: 181%;
   }
+/* mq video section */
+
+.slider{
+  width: 1000px;
+ 
+} 
+
   .slide {
     flex-direction: column;
     min-height: 600px;
-    margin-top: 80px;
+    margin-top: 2%;
+ 
+
 }
 
 .slide iframe {
-    margin: 0 0 20px 0; /* Add margin to separate the iframe and text */
+    margin: 0 0 0 0; 
+    min-width: 400px;
+
 }
 
 .slide div {
     width: 100%;
     margin-left: 0;
-    padding: 0 20px;
+
 }
 
-
-.slide h2, .slide p {
+.slide h2 {
     text-align: center;
 
 }
+.slide p{
+  text-align: justify;
+}
+/* mq video section */
 
+}
+
+@media  screen and (max-width: 1000px) {
+
+  /* mq nav */
+  header .nav-wrapper{
+    position: relative !important;
+    top: 0;
+    width:   0% !important;
+    pointer-events: auto;
+    
+  }
+  .fixed-nav {
+    position: absolute !important;
+    top: 0;
+    
+  }
+  
+  header .barrier{
+    height: 65px;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    
+  }
+  .navigation-bar{  
+    width: 45%;
+    border-radius: 50px;
+    position: absolute;
+    text-align: center;
+    /* left: 16.5% !important; */
+    transition: 0.1s;
+    display: flex;
+    flex-direction: column !important;
+
+  }
+  .widen-nav{
+    width: 0% !important;
+    left: 0;
+    border-radius: 0;
+
+  }
+  .navigation-bar ul{
+   display: flex;
+   flex-direction: column !important;
+   justify-content: center;
+   width: 100%;
+   height: 300px !important;
+  } 
+
+  .navigation-bar ul li{
+    flex: 1;
+  }
+  
+  .navigation-bar a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black; 
+    background-color: red;
+    height: 50px;
+    transition: 0.3s;
+    width: 100% !important;
+    border: none !important;
+  }
+
+  .navigation-bar a.no-radius {
+    border-radius: 0 !important;
+}
+
+  .navigation-bar a:hover{
+    color: white;
+    background-color: black;
+
+  }
+  .navbar-toggle svg{
+    display: block !important;
+    z-index: 1;
+  }
+ 
+    .navbar-toggle{
+  position: fixed;
+  background-color:  #333333;
+  border-radius: 50%;
+  top: 9%;
+  left: 15%;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  transform: translate(-50.1%, -50.1%);
+  transition: width 0.7s ease, height 0.7s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-toggle.active {
+  width: 260vw;
+  height: 260vh;
+  pointer-events: none; /* Disable clicking on the background */
+}
+.navbar-toggle.active svg {
+  pointer-events: auto; /* Enable clicking on the svg */
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+  /* mq nav */
+
+  /* mq header */
+  .hero-content{
+      position: static;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items:center;
+      text-align: center;
+      height: 100%;
+  }
+
+  .hero-link{
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+  }
+  .hero-content *{
+      margin: 0 !important;
+  }
+  .hero-content h1{
+      font-size: 35px;
+      margin-inline: 50px !important; 
+      margin-top: 50px !important;
+  }
+  .hero-content h2{
+      margin-inline: 70px !important; 
+      font-size: 25px;
+  }
+  .hero-content h3{
+      font-size: 20px;
+  }
+  .hero-content h4{
+      font-size: 12px;
+  }
+  /* mq header */
+
+  .slider{
+    width: 100% !important;
+  }
+  
 }
 
 @media screen and (max-width: 1100px) {
@@ -471,12 +612,14 @@ header{
       margin-top: -21%;
   }
 
-  section{
-    flex-direction: column;
-  /* margin-block: 100px; */
+  /* mq main  */
+
+  main section{
+    flex-direction: column;    
   }
-  main section div{
+  main section *{
     margin-inline: 0 !important;
+
   }
   main h1{
     padding-bottom: 0;
@@ -518,16 +661,7 @@ header{
   .item10{
     order: 10;
   }
-
-}
-@media  screen and (max-width: 430px) {
-.grid-container{
-  width: 100%;
-}
-.grid-item .img{
-  max-width: 100%;
-}
-
+  /* mq main  */
 
 }
 
@@ -540,7 +674,7 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 80px 150px;
+    padding: 5px 0px;
     box-sizing: border-box;
     text-align: center;
   }
@@ -549,6 +683,7 @@ header{
     margin-block: 40px;
     padding: 0;
     color: #CDBFBF;
+    margin-inline: 50px;
   }
   
   .book-list {
@@ -626,14 +761,29 @@ footer {
   padding-inline: 7px;
   font-size: 22px;
 }
+.footer-nav{
+  display: flex;
+  justify-content: center;
+
+}
+.footer-nav ul{
+  display: flex;  
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-inline: 20px;
+}
 
 .footer-nav a {
   margin: 0 10px;
   color: #fff;
 }
 
+
 .footer-nav a:hover {
   text-decoration: underline;
+  
 }
 
 .copyright {
@@ -648,7 +798,18 @@ footer {
 
 /* footer contents css styles */
  
+@media screen and (max-width: 400px) {
+  /* mq footer */
 
+  .footer-nav ul{
+    flex-direction: column;
+    row-gap: 40px;
+    margin-inline: 200px;
+   
+  }
+
+  /* mq footer */
+}
 
 
  

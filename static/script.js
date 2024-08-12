@@ -95,11 +95,6 @@ window.addEventListener('scroll', function() {
             link.classList.add("no-radius");
         });
     }
-    // else if (navEntries.length > 0 && navEntries[0].type === "reload") {
-    //         fixed.classList.add('fixed-nav');
-    //         widen.classList.add('widen-nav');
-    //         links.forEach(link => link.classList.add("no-radius"));
-    //     }
 
      else {
         fixed.classList.remove('fixed-nav');
@@ -115,17 +110,16 @@ window.addEventListener('scroll', function() {
 }
 
 
-// Check the scroll position on page load and revalidate after a short delay
-window.addEventListener('load', () => {
-    requestAnimationFrame(updateNavOnScroll);
-
-    // Fallback to revalidate after a short delay
-    setTimeout(updateNavOnScroll, 100);
-});
-
-// Update the nav on scroll
-window.addEventListener('scroll', updateNavOnScroll);
-
 
 /*transform to full width and fixing the position of navigation bar*/
-  
+
+  // Toggle Menu
+  document.getElementById('toggle-button').addEventListener('click', function() {
+    var navWrapper = document.getElementById('fixed');
+    var body = document.body;
+    var button = this;
+
+    navWrapper.classList.toggle('active');
+    button.classList.toggle('active');
+    body.classList.toggle('no-scroll'); // Toggle scroll behavior
+});
