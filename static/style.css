@@ -22,15 +22,14 @@ header{
     background-color: black;
 }
 .hero {
-    height: 100vh;
+    height: 100svh;
     background-image: url('/static/StephenHawkingjpg.png');
-    background-size: contain;
-    background-position: center ;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment:scroll;
     color: white;
      margin-top: -65px;
-
+  
   }
 
 
@@ -241,23 +240,6 @@ header{
     height: 270px;
   } 
 
-  .item4 > *{
-    margin-left: 50px;
-
-  }
-  .item3{
-    margin-left: 60px;
-  }
-  .item8 > *{
-    margin-left: 60px;
-   
-  }
-  .item7 > *{
-   margin-left: 50px;
-  }
-  .item10{
-   margin-right: 40px;
-  }
   .timeline{
     height: 84%;
     background-color: black;
@@ -287,7 +269,7 @@ header{
 
  .video-section {
   width: 100%;
-  padding: 150px 0;
+  padding: 160px 0;
   background: linear-gradient(to right, #050505, #2D2D2D);
   position: relative;
   display: flex;
@@ -453,9 +435,21 @@ header{
 
 }
 
+@media screen and (max-width: 450px) {
+  .hero{
+    height: 110svh;
+  }
+}
+@media screen and (max-width: 350px){
+  .hero{
+    height: 125svh;
+  }
+}
+
 @media  screen and (max-width: 1000px) {
 
   /* mq nav */
+ 
   header .nav-wrapper{
     position: relative !important;
     top: 0;
@@ -481,7 +475,6 @@ header{
     border-radius: 50px;
     position: absolute;
     text-align: center;
-    /* left: 16.5% !important; */
     transition: 0.1s;
     display: flex;
     flex-direction: column !important;
@@ -510,7 +503,6 @@ header{
     align-items: center;
     justify-content: center;
     color: black; 
-    background-color: red;
     height: 50px;
     transition: 0.3s;
     width: 100% !important;
@@ -550,10 +542,10 @@ header{
 .navbar-toggle.active {
   width: 260vw;
   height: 260vh;
-  pointer-events: none; /* Disable clicking on the background */
+  pointer-events: none; 
 }
 .navbar-toggle.active svg {
-  pointer-events: auto; /* Enable clicking on the svg */
+  pointer-events: auto;
 }
 
 
@@ -617,10 +609,7 @@ header{
   main section{
     flex-direction: column;    
   }
-  main section *{
-    margin-inline: 0 !important;
-
-  }
+  
   main h1{
     padding-bottom: 0;
   }
@@ -674,7 +663,7 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5px 0px;
+    padding: 110px 0px;
     box-sizing: border-box;
     text-align: center;
   }
